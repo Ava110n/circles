@@ -36,6 +36,11 @@ public partial class MainWindow : Window
         canvas.Background = Brushes.AliceBlue;
         canvas.MouseLeftButtonDown += new MouseButtonEventHandler(placeCircle);
         canvas.MouseRightButtonDown += new MouseButtonEventHandler(removeCircle);
+        Canvas.SetTop(canvas, 0);
+        Canvas.SetLeft(canvas, 0);
+        canvas.KeyDown += new KeyEventHandler(moveCircle);
+        //canvas.MouseDoubleClick += new MouseButtonEventHandler(addTeleport);
+        canvas.MouseRightButtonDown += new MouseButtonEventHandler(removeCircle);
         //canvas.KeyDown += new KeyEventHandler(moveCircle);
         //canvas.MouseDoubleClick += new MouseButtonEventHandler(addTeleport);
 
