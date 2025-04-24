@@ -171,4 +171,25 @@ public partial class MainWindow : Window
         }
 
     }
+
+    private void removeCircle(object sender, MouseButtonEventArgs e)
+    {
+        var position = e.GetPosition(canvas);
+        var posX = (int)((int)(position.X / squareW) * squareW);
+        var posY = (int)((int)(position.Y / squareH) * squareH);
+
+        var elements = canvas.Children;
+        foreach (var element in elements)
+        {
+            if (element is Ellipse)
+            {
+                var elem = (Ellipse)element;
+                if (elem.Margin.Left == posX && elem.Margin.Top == posY)
+                {
+                    canvas.Children.Remove(elem);
+                    return;
+                }
+            }
+        }
+    }
 }
