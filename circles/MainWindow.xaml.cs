@@ -35,6 +35,9 @@ public partial class MainWindow : Window
         canvas.Width = 800;
         canvas.Background = Brushes.AliceBlue;
         canvas.MouseLeftButtonDown += new MouseButtonEventHandler(placeCircle);
+        canvas.MouseRightButtonDown += new MouseButtonEventHandler(removeCircle);
+        //canvas.KeyDown += new KeyEventHandler(moveCircle);
+        //canvas.MouseDoubleClick += new MouseButtonEventHandler(addTeleport);
 
 
         double cWidth = canvas.Width;
@@ -191,5 +194,10 @@ public partial class MainWindow : Window
                 }
             }
         }
+    }
+
+    private void addTeleport(object sender, MouseButtonEventArgs e)
+    {
+        MessageBox.Show("qwe");
     }
 }

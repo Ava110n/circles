@@ -5,6 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:circles"
         mc:Ignorable="d"
-        Title="MainWindow" Height="900" Width="900" MinHeight="400" MinWidth="300" KeyDown="moveCircle" MouseLeftButtonDown="placeCircle" MouseRightButtonDown="removeCircle">
+        Title="MainWindow" Height="900" Width="900" MinHeight="400" MinWidth="300" KeyDown="moveCircle">
     
 </Window>
